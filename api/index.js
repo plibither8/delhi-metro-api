@@ -65,9 +65,5 @@ const getStations = (stationName = null) => {
 
 };
 
-(async () => {
-    console.log(getStations((getLines('Violet Line')).stations[0].name));
-})();
-
 module.exports.getLines    = getLines;
 module.exports.getStations = getStations;

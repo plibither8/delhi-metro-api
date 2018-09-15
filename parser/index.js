@@ -2,14 +2,14 @@ const cheerio = require('cheerio');
 const {
     getHtml,
     exceptionCheck,
-    search
+    writeToJson
 }             = require('./helpers');
 
-const getLines = async (line = null) => {
+const parse = async () => {
 
     const html = await getHtml();
     const $ = cheerio.load(html, {
-        normalizeWhitespace: true   
+        normalizeWhitespace: true
     });
 
     let linesArray = [];
@@ -21,17 +21,17 @@ const getLines = async (line = null) => {
             stationsArray = [];
 
         const rows = $(table).find('tr');
-        rows.each((i, row) => {
+        rows.each((j, row) => {
             
-            if (i === 0) {
+            if (j === 0) {
                 return;
             }
             
-            let stationObj = { id: i };
+            let stationObj = { id: j-1 };
 
             const cells = $(row).find('td');
-            cells.each((j, cell) => {
-                switch (j) {
+            cells.each((k, cell) => {
+                switch (k) {
                     case 0:
                         return;
                     case 1:
@@ -57,64 +57,11 @@ const getLines = async (line = null) => {
         linesArray.push(lineObj);
 
     });
-    
-    if (line) {
-        for (lineObj of linesArray) {
-            if (lineObj.name === line) {
-                return lineObj;
-            }
-        }
-        return null;
-    }
 
-    return linesArray;
+    writeToJson(linesArray);
 
-};
+}
 
-const getStations = async (stationName = null) => {
-
-    const linesArray = await getLines();
-    let stationsArray = [];
-
-    linesArray.map(line => {
-        
-        const stations = line.stations;
-        stations.map(station => {
-
-            const searchResult = search(stationsArray, station);
-            if (searchResult > -1) {
-                stationsArray[searchResult].lines.push({ name: line.name, id: station.id });
-            }
-            else {
-                let stationObj = {
-                    name: station.name,
-                    mobile: station.mobile,
-                    lines: [
-                        {
-                            name: line.name,
-                            id: station.id
-                        }
-                    ]
-                };
-                stationsArray.push(stationObj);
-            }
-        });
-
-    });
-
-    if (stationName) {
-        for (station of stationsArray) {
-            if (station.name === stationName) {
-                return station;
-            }
-        }
-        return null;
-    }
-
-    stationsArray.sort((a, b) => a.name.localeCompare(b.name));
-    return stationsArray;
-
-};
-
-module.exports.getLines = getLines;
-module.exports.getStations = getStations;
+(() => {
+    parse();
+})();

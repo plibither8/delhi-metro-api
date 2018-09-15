@@ -1,6 +1,19 @@
-const request = require('request-promise');
+const request        = require('request-promise');
+const fs             = require('fs');
+const path           = require('path');
+const { promisify }  = require('util');
+
+const writeFile      = promisify(fs.writeFile);
 
 const delhiMetroInfoUrl = 'https://delhimetrorail.info/delhi-metro-stations';
+
+module.exports.writeToJson = async (data) => {
+    await writeFile(path.join(__dirname, '../data.json'), JSON.stringify(data, null, '  '), 'utf8', (err) => {
+        if (err) {
+            throw err;
+        }
+    });
+};
 
 module.exports.getHtml = async () => {
     let html;
@@ -18,13 +31,4 @@ module.exports.exceptionCheck = (name) => {
         return 'Janak Puri West';
     }
     return null;
-};
-
-module.exports.search = (arr, obj) => {
-    for (const [i, el] of arr.entries()) {
-        if (el.name === obj.name) {
-            return i;
-        }
-    }
-    return -1;
 };

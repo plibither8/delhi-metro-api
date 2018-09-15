@@ -21,7 +21,7 @@ module.exports.getHtml = async () => {
         html = body;
         if (err) {
             throw err;
-        };
+        }
     });
     return html;
 };

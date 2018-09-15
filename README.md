@@ -4,4 +4,4 @@
 
 ## License
 
-[MIT](LICENSE) (c) 2018, Mihir Chaturvedi
+[MIT](LICENSE) (c) Mihir Chaturvedi

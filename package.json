@@ -1,0 +1,33 @@
+{
+  "name": "delhi-metro-api",
+  "version": "1.0.0",
+  "description": "RESTful API for the Delhi Metro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/plibither8/delhi-metro-api.git"
+  },
+  "keywords": [
+    "api",
+    "delhi",
+    "metro",
+    "'delhi",
+    "metro'",
+    "rest",
+    "restful"
+  ],
+  "author": "Mihir Chaturvedi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/plibither8/delhi-metro-api/issues"
+  },
+  "homepage": "https://github.com/plibither8/delhi-metro-api#readme",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.2",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}

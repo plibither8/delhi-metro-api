@@ -7,8 +7,8 @@ const writeFile      = promisify(fs.writeFile);
 
 const delhiMetroInfoUrl = 'https://delhimetrorail.info/delhi-metro-stations';
 
-module.exports.writeToJson = async (data) => {
-    await writeFile(path.join(__dirname, '../data.json'), JSON.stringify(data, null, '  '), 'utf8', (err) => {
+module.exports.writeToJson = async (object, fileName) => {
+    await writeFile(path.join(__dirname, `../${fileName}`), JSON.stringify(object, null, '  '), 'utf8', (err) => {
         if (err) {
             throw err;
         }

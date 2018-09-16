@@ -1,4 +1,4 @@
-const linesArray = require('./data.json');
+const linesArray = require('./data/lines.json');
 
 const search = (arr, obj) => {
     for (const [i, el] of arr.entries()) {
@@ -32,7 +32,12 @@ const getStations = (stationName = null) => {
 
             const searchResult = search(stationsArray, station);
             if (searchResult > -1) {
-                stationsArray[searchResult].lines.push({ name: line.name, id: station.id });
+                stationsArray[searchResult].lines.push({
+                    name: line.name,
+                    lineId: line.id,
+                    stationId: station.id,
+                    distance: station.distance
+                });
             }
             else {
                 let stationObj = {
@@ -41,7 +46,9 @@ const getStations = (stationName = null) => {
                     lines: [
                         {
                             name: line.name,
-                            id: station.id
+                            lineId: line.id,
+                            stationId: station.id,
+                            distance: station.distance
                         }
                     ]
                 };
@@ -65,5 +72,10 @@ const getStations = (stationName = null) => {
 
 };
 
+const getMetaInfo = () => {
+    return require('./data/meta.json');
+}
+
 module.exports.getLines    = getLines;
 module.exports.getStations = getStations;
+module.exports.getMetaInfo = getMetaInfo;

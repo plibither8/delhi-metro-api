@@ -32,20 +32,20 @@ const parse = async () => {
             const cells = $(row).find('td');
             cells.each((k, cell) => {
                 switch (k) {
-                case 0:
-                    return;
-                case 1: {
-                    const defaultName = $(cell).find('a').html().trim();
-                    const exception = exceptionCheck(defaultName);
-                    stationObj.name = exception ? exception : defaultName;
-                    break;
-                }
-                case 2:
-                    stationObj.distance = Number($(cell).html());
-                    break;
-                case 3:
-                    stationObj.mobile = Number($(cell).html());
-                    break;
+                    case 0:
+                        return;
+                    case 1: {
+                        const defaultName = $(cell).find('a').html().trim();
+                        const exception = exceptionCheck(defaultName);
+                        stationObj.name = exception ? exception : defaultName;
+                        break;
+                    }
+                    case 2:
+                        stationObj.distance = Number($(cell).html());
+                        break;
+                    case 3:
+                        stationObj.mobile = Number($(cell).html());
+                        break;
                 }
             });
 
@@ -54,12 +54,14 @@ const parse = async () => {
         });
 
         lineObj.name = $(table).find('caption').html().trim();
+        lineObj.id = i;
         lineObj.stations = stationsArray;
         linesArray.push(lineObj);
 
     });
 
-    writeToJson(linesArray);
+    writeToJson(linesArray, 'lines.json');
+    writeToJson({ updated: new Date() }, 'meta.json');
 
 };
 

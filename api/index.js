@@ -11,7 +11,7 @@ const search = (arr, obj) => {
 
 const getLines = (line = null) => {
     if (line) {
-        for (lineObj of linesArray) {
+        for (let lineObj of linesArray) {
             if (lineObj.name === line || lineObj.name.split(' ')[0].toLowerCase() === line) {
                 return lineObj;
             }
@@ -59,7 +59,7 @@ const getStations = (stationName = null) => {
     });
 
     if (stationName) {
-        for (station of stationsArray) {
+        for (let station of stationsArray) {
             if (station.name === stationName || station.name.split(' ').join('').toLowerCase() === stationName) {
                 return station;
             }
@@ -72,9 +72,23 @@ const getStations = (stationName = null) => {
 
 };
 
+// const getRoutes = (from, to) => {
+
+//     const stationArray = getStations();
+
+//     let from;
+
+//     for (station of stationsArray) {
+//         if (station.name === stationName || station.name.split(' ').join('').toLowerCase() === stationName) {
+//             return station;
+//         }
+//     }
+
+// };
+
 const getMetaInfo = () => {
     return require('./data/meta.json');
-}
+};
 
 module.exports.getLines    = getLines;
 module.exports.getStations = getStations;

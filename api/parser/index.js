@@ -1,13 +1,13 @@
 const cheerio = require('cheerio');
 const {
-    getHtml,
     exceptionCheck,
-    writeToJson
+    writeToJson,
+    getStationsHtml
 }             = require('./helpers');
 
 const parse = async () => {
 
-    const html = await getHtml();
+    const html = await getStationsHtml();
     const $ = cheerio.load(html, {
         normalizeWhitespace: true
     });

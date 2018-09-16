@@ -15,6 +15,11 @@ router.get('/lines/:line', (req, res) => {
     return res.json(api.getLines(line));
 });
 
+router.get('/lines/:line/:id', (req, res) => {
+    const { line, id } = req.params;
+    return res.json(api.getLines(line, id));
+});
+
 router.get('/stations', (req, res) => {
     return res.json(api.getStations());
 });
@@ -22,6 +27,11 @@ router.get('/stations', (req, res) => {
 router.get('/stations/:station', (req, res) => {
     const { station } = req.params;
     return res.json(api.getStations(station));
+});
+
+router.get('/stations/:station/lines', (req, res) => {
+    const { station } = req.params;
+    return res.json(api.getStations(station, 1));
 });
 
 router.get('/route/:from/:to', (req, res) => {

@@ -9,24 +9,47 @@ const search = (arr, obj) => {
     return -1;
 };
 
-const getLines = (line = null) => {
+const getLines = (line = null, id = null) => {
     if (line) {
-        for (let lineObj of linesArray) {
-            if (lineObj.name === line || lineObj.name.split(' ')[0].toLowerCase() === line) {
-                return lineObj;
+        if (/^[a-z]+$/i.test(line)) {
+            for (let lineObj of linesArray) {
+                if (lineObj.name.split(' ')[0].toLowerCase() === line.split(' ')[0].toLowerCase()
+                    || lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
+
+                    if (id) {
+                        if (id < lineObj.stations.length) {
+                            return lineObj.stations[id];
+                        }
+                        return null;
+                    }
+                    return lineObj;
+
+                }
             }
+            return null;
         }
-        return null;
+        else if (/^[0-9]+$/i.test(line)) {
+            if (line < linesArray.length) {
+                if (id) {
+                    if (id < linesArray[line].stations.length) {
+                        return linesArray[line].stations[id];
+                    }
+                    return null;
+                }
+                return linesArray[line];
+            }
+            return null;
+        }
     }
     return linesArray;
 };
 
-const getStations = (stationName = null) => {
+const getStations = (stationName = null, returnLines = 0) => {
 
     let stationsArray = [];
 
     linesArray.map(line => {
-        
+
         const stations = line.stations;
         stations.map(station => {
 
@@ -60,7 +83,10 @@ const getStations = (stationName = null) => {
 
     if (stationName) {
         for (let station of stationsArray) {
-            if (station.name === stationName || station.name.split(' ').join('').toLowerCase() === stationName) {
+            if (station.name.split(' ').join('').toLowerCase() === stationName.split(' ')[0].toLowerCase()) {
+                if (returnLines) {
+                    return station.lines;
+                }
                 return station;
             }
         }

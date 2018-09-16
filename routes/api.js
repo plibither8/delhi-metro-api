@@ -1,9 +1,9 @@
-const express = require('express');
-const api     = require('../api');
-const router  = express.Router();
+const express  = require('express');
+const api      = require('../api');
+const router   = express.Router();
 
 router.get('/', (req, res, next) => {
-    return res.json(api.getLines()); 
+    return res.json(api.getMetaInfo()); 
 })
 
 router.get('/lines', (req, res, next) => {

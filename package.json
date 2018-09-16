@@ -2,7 +2,7 @@
   "name": "delhi-metro-api",
   "version": "0.0.1",
   "description": "RESTful API for the Delhi Metro",
-  "main": "index.js",
+  "main": "api/index.js",
   "scripts": {
     "lint": "eslint \"app.js\" \"routes/*.js\" \"api/*.js\"",
     "lint:fix": "npm run lint -- --fix"
@@ -15,8 +15,7 @@
     "api",
     "delhi",
     "metro",
-    "'delhi",
-    "metro'",
+    "delhi metro",
     "rest",
     "restful"
   ],

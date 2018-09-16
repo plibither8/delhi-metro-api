@@ -12,7 +12,7 @@ const search = (arr, obj) => {
 const getLines = (line = null) => {
     if (line) {
         for (lineObj of linesArray) {
-            if (lineObj.name === line) {
+            if (lineObj.name === line || lineObj.name.split(' ')[0].toLowerCase() === line) {
                 return lineObj;
             }
         }
@@ -53,7 +53,7 @@ const getStations = (stationName = null) => {
 
     if (stationName) {
         for (station of stationsArray) {
-            if (station.name === stationName) {
+            if (station.name === stationName || station.name.split(' ').join('').toLowerCase() === stationName) {
                 return station;
             }
         }

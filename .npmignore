@@ -1,7 +1,0 @@
-src/
-test/
-assets/
-.github/
-.babelrc
-.eslintrc
-.travis.yml

@@ -1,6 +1,6 @@
 const rawLinesData = require('./data/lines.json');
 
-const errorMsg = "Error: Invalid query. Please try again.";
+const errorMsg = 'Error: Invalid query. Please try again.';
 
 const searchStation = (arr, obj) => {
     for (const [i, el] of arr.entries()) {
@@ -67,7 +67,7 @@ const getLines = (lineName = null, id = null, key = null) => {
     if (lineName) {
         const line = lineNameValidity(lineName);
         if (line !== -1) {
-            return returnLinesRequiredData(line, id, key)
+            return returnLinesRequiredData(line, id, key);
         }
         return errorMsg;
     }

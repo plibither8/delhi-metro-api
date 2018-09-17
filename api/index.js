@@ -1,6 +1,8 @@
-const linesArray = require('./data/lines.json');
+const rawLinesData = require('./data/lines.json');
 
-const search = (arr, obj) => {
+const errorMsg = "Error: Invalid query. Please try again.";
+
+const searchStation = (arr, obj) => {
     for (const [i, el] of arr.entries()) {
         if (el.name === obj.name) {
             return i;
@@ -9,51 +11,81 @@ const search = (arr, obj) => {
     return -1;
 };
 
-const getLines = (line = null, id = null) => {
-    if (line) {
-        if (/^[a-z]+$/i.test(line)) {
-            for (let lineObj of linesArray) {
-                if (lineObj.name.split(' ')[0].toLowerCase() === line.split(' ')[0].toLowerCase()
-                    || lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
+const returnLinesRequiredData = (lineObj, id, key) => {
 
-                    if (id) {
-                        if (id < lineObj.stations.length) {
-                            return lineObj.stations[id];
-                        }
-                        return null;
-                    }
-                    return lineObj;
-
+    if (id) {
+        if (id < lineObj.stations.length) {
+            if (key) {
+                if (lineObj.stations[id].hasOwnProperty(key)) {
+                    return lineObj.stations[id][key];
                 }
+                return errorMsg;
             }
-            return null;
+            return lineObj.stations[id];
         }
-        else if (/^[0-9]+$/i.test(line)) {
-            if (line < linesArray.length) {
-                if (id) {
-                    if (id < linesArray[line].stations.length) {
-                        return linesArray[line].stations[id];
-                    }
-                    return null;
-                }
-                return linesArray[line];
-            }
-            return null;
-        }
+        return errorMsg;
     }
-    return linesArray;
+    return lineObj;
+
 };
 
-const getStations = (stationName = null, returnLines = 0) => {
+const populateLinesArray = () => {
+    return rawLinesData.map(line => {
+        const stationsArray = line.stations.map(station => getStations(station.name));
+        return {
+            name: line.name,
+            id: line.id,
+            stations: stationsArray
+        };
+    });
+};
+
+const lineNameValidity = (line) => {
+    const linesArray = populateLinesArray();
+    if (/^[a-zA-Z ]*$/i.test(line)) {
+        for (let lineObj of linesArray) {
+            if (lineObj.name.split(' ')[0].toLowerCase() === line.split(' ')[0].toLowerCase()
+                || lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
+                return lineObj;
+            }
+        }
+        return -1;
+    }
+    else if (/^[0-9]+$/i.test(line)) {
+        if (line < linesArray.length) {
+            return linesArray[line];
+        }
+        return -1;
+    }
+    return -1;
+};
+
+const getLines = (lineName = null, id = null, key = null) => {
+
+    const linesArray = populateLinesArray();
+
+    if (lineName) {
+        const line = lineNameValidity(lineName);
+        if (line !== -1) {
+            return returnLinesRequiredData(line, id, key)
+        }
+        return errorMsg;
+    }
+
+    return linesArray;
+
+};
+
+const getStations = (stationName = null, key = null) => {
 
     let stationsArray = [];
 
-    linesArray.map(line => {
+    rawLinesData.map(line => {
 
         const stations = line.stations;
         stations.map(station => {
 
-            const searchResult = search(stationsArray, station);
+            const searchResult = searchStation(stationsArray, station);
             if (searchResult > -1) {
                 stationsArray[searchResult].lines.push({
                     name: line.name,
@@ -83,14 +115,17 @@ const getStations = (stationName = null, returnLines = 0) => {
 
     if (stationName) {
         for (let station of stationsArray) {
-            if (station.name.split(' ').join('').toLowerCase() === stationName.split(' ')[0].toLowerCase()) {
-                if (returnLines) {
-                    return station.lines;
+            if (station.name.split(' ').join('').toLowerCase() === stationName.split(' ').join('').toLowerCase()) {
+                if (key) {
+                    if (station.hasOwnProperty(key)) {
+                        return station[key];
+                    }
+                    return errorMsg;
                 }
                 return station;
             }
         }
-        return null;
+        return errorMsg;
     }
 
     stationsArray.sort((a, b) => a.name.localeCompare(b.name));
@@ -98,7 +133,27 @@ const getStations = (stationName = null, returnLines = 0) => {
 
 };
 
-// const getRoutes = (from, to) => {
+const getLineList = () => {
+    let lineNames = [];
+    rawLinesData.map(line => lineNames.push(line.name));
+    return lineNames;
+};
+
+const getStationList = (lineName = null) => {
+    let stationNames = [];
+    if (lineName) {
+        const line = lineNameValidity(lineName);
+        if (line !== -1) {
+            getLines(line.name).stations.map(station => stationNames.push(station.name));
+            return stationNames;
+        }
+        return errorMsg;
+    }
+    getStations().map(station => stationNames.push(station.name));
+    return stationNames;
+};
+
+// const getRoute = (from, to) => {
 
 //     const stationArray = getStations();
 
@@ -116,6 +171,8 @@ const getMetaInfo = () => {
     return require('./data/meta.json');
 };
 
-module.exports.getLines    = getLines;
-module.exports.getStations = getStations;
-module.exports.getMetaInfo = getMetaInfo;
+module.exports.getLines       = getLines;
+module.exports.getStations    = getStations;
+module.exports.getLineList    = getLineList;
+module.exports.getStationList = getStationList;
+module.exports.getMetaInfo    = getMetaInfo;

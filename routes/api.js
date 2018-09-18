@@ -16,17 +16,16 @@ router.get('/stations/:station?/:key?', (req, res) => {
     return res.json(api.getStations(station, key));
 });
 
-router.get('/list', (req, res) => {
-    return res.json({ lines: api.getLineList(), stations: api.getStationList() });
-});
-
-router.get('/list/lines', (req, res) => {
-    return res.json(api.getLineList());
-});
-
-router.get('/list/stations/:line?', (req, res) => {
-    const { line } = req.params;
-    return res.json(api.getStationList(line));
+router.get('/list/:option(lines|stations)?/:line?', (req, res) => {
+    const { option, line } = req.params;
+    if (line) {
+        return res.json(api.getStationList(line));
+    }
+    switch (option) {
+        case undefined  : return res.json({ lines: api.getLineList(), stations: api.getStationList() });
+        case 'lines'    : return res.json(api.getLineList());
+        case 'stations' : return res.json(api.getStationList());
+    }
 });
 
 router.get('/route/:from/:to', (req, res) => {

@@ -5,7 +5,8 @@
   "main": "api/index.js",
   "scripts": {
     "lint": "eslint \"app.js\" \"routes/*.js\" \"api/*.js\"",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "update-data": "node api/parser"
   },
   "repository": {
     "type": "git",

@@ -785,19 +785,19 @@
       },
       {
         "id": 18,
-        "name": "Modern Industrial Estate (MIE)",
+        "name": "Pandit Shree Ram Sharma",
         "distance": 8753.1,
         "mobile": 0
       },
       {
         "id": 19,
-        "name": "Bus Stand",
+        "name": "Bahdurgarh City",
         "distance": 8753.1,
         "mobile": 0
       },
       {
         "id": 20,
-        "name": "Bahadurgarh City Park",
+        "name": "Brig Hoshiar Singh",
         "distance": 8753.1,
         "mobile": 0
       }
@@ -917,158 +917,170 @@
       },
       {
         "id": 6,
-        "name": "Central Secretariat",
-        "distance": 8.3,
-        "mobile": 8800793135
+        "name": "Janpath",
+        "distance": 7.2,
+        "mobile": 0
       },
       {
         "id": 7,
-        "name": "Janpath",
-        "distance": 9.5,
-        "mobile": 0
+        "name": "Central Secretariat",
+        "distance": 8.5,
+        "mobile": 8800793135
       },
       {
         "id": 8,
         "name": "Khan Market",
-        "distance": 12,
+        "distance": 10.6,
         "mobile": 8800793218
       },
       {
         "id": 9,
         "name": "Jawaharlal Nehru Stadium",
-        "distance": 13.5,
+        "distance": 12,
         "mobile": 8800793219
       },
       {
         "id": 10,
         "name": "Jangpura",
-        "distance": 14.4,
+        "distance": 12.9,
         "mobile": 8800793220
       },
       {
         "id": 11,
         "name": "Lajpat Nagar",
-        "distance": 15.8,
+        "distance": 14.4,
         "mobile": 8800793221
       },
       {
         "id": 12,
         "name": "Moolchand",
-        "distance": 16.6,
+        "distance": 15.1,
         "mobile": 8800793222
       },
       {
         "id": 13,
         "name": "Kailash Colony",
-        "distance": 17.8,
+        "distance": 16.4,
         "mobile": 8800793223
       },
       {
         "id": 14,
         "name": "Nehru Place",
-        "distance": 18.9,
+        "distance": 17.4,
         "mobile": 8800793224
       },
       {
         "id": 15,
         "name": "Kalkaji Mandir",
-        "distance": 19.6,
+        "distance": 18.2,
         "mobile": 8800793225
       },
       {
         "id": 16,
         "name": "Govind Puri",
-        "distance": 20.4,
+        "distance": 18.9,
         "mobile": 8800793226
       },
       {
         "id": 17,
         "name": "Okhla",
-        "distance": 21.5,
+        "distance": 20,
         "mobile": 8800793227
       },
       {
         "id": 18,
         "name": "Jasola",
-        "distance": 22.4,
+        "distance": 20.9,
         "mobile": 8800793228
       },
       {
         "id": 19,
         "name": "Sarita Vihar",
-        "distance": 23.6,
+        "distance": 22.1,
         "mobile": 8800793229
       },
       {
         "id": 20,
         "name": "Mohan Estate",
-        "distance": 24.7,
+        "distance": 23.3,
         "mobile": 8800793230
       },
       {
         "id": 21,
         "name": "Tughlakabad",
-        "distance": 26.7,
+        "distance": 25.2,
         "mobile": 8800793231
       },
       {
         "id": 22,
         "name": "Badarpur",
-        "distance": 27.8,
+        "distance": 26.3,
         "mobile": 8800793232
       },
       {
         "id": 23,
         "name": "Sarai",
-        "distance": 30.2,
+        "distance": 28.8,
         "mobile": 0
       },
       {
         "id": 24,
         "name": "N.H.P.C. Chowk",
-        "distance": 31.8,
+        "distance": 30.4,
         "mobile": 0
       },
       {
         "id": 25,
         "name": "Mewala Maharajpur",
-        "distance": 32.8,
+        "distance": 31.3,
         "mobile": 0
       },
       {
         "id": 26,
         "name": "Sector 28 Faridabad",
-        "distance": 33.9,
+        "distance": 32.5,
         "mobile": 0
       },
       {
         "id": 27,
         "name": "Badkal Mor",
-        "distance": 35.7,
+        "distance": 34.2,
         "mobile": 0
       },
       {
         "id": 28,
         "name": "Old Faridabad",
-        "distance": 36.9,
+        "distance": 35.4,
         "mobile": 0
       },
       {
         "id": 29,
         "name": "Neelam Chowk Ajronda",
-        "distance": 38.4,
+        "distance": 37,
         "mobile": 0
       },
       {
         "id": 30,
         "name": "Bata Chowk",
-        "distance": 39.8,
+        "distance": 38.3,
         "mobile": 0
       },
       {
         "id": 31,
         "name": "Escorts Mujesar",
-        "distance": 41.5,
+        "distance": 40.1,
+        "mobile": 0
+      },
+      {
+        "id": 32,
+        "name": "Sant Surdas - Sihi",
+        "distance": 8803.3,
+        "mobile": 0
+      },
+      {
+        "id": 33,
+        "name": "Raja Nahar Singh",
+        "distance": 8803.3,
         "mobile": 0
       }
     ]
@@ -1338,6 +1350,96 @@
       {
         "id": 17,
         "name": "Lajpat Nagar",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 18,
+        "name": "Trilokpuri Sanjay Lake",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 19,
+        "name": "Vinod Nagar East",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 20,
+        "name": "Mandawali - West Vinod Nagar",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 21,
+        "name": "IP Extension",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 22,
+        "name": "Anand Vihar",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 23,
+        "name": "Karkarduma",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 24,
+        "name": "Karkarduma Court",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 25,
+        "name": "Krishna Nagar",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 26,
+        "name": "East Azad Nagar",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 27,
+        "name": "Welcome",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 28,
+        "name": "Jaffrabad",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 29,
+        "name": "Maujpur",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 30,
+        "name": "Gokulpuri",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 31,
+        "name": "Johri Enclave",
+        "distance": 8784.4,
+        "mobile": 0
+      },
+      {
+        "id": 32,
+        "name": "Shiv Vihar",
         "distance": 8784.4,
         "mobile": 0
       }

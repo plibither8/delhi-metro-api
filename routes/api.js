@@ -18,9 +18,9 @@ router.get('/stations/:station?/:key?', (req, res) => {
 
 router.get('/list/:option(lines|stations)?/:line?', (req, res) => {
     const { option, line } = req.params;
-    if (line) {
-        return res.json(api.getStationList(line));
-    }
+
+    if (line) return res.json(api.getStationList(line));
+
     switch (option) {
         case undefined  : return res.json({ lines: api.getLineList(), stations: api.getStationList() });
         case 'lines'    : return res.json(api.getLineList());

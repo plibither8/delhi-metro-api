@@ -13,21 +13,18 @@ const searchStation = (arr, obj) => {
 
 const returnLinesRequiredData = (lineObj, id, key) => {
 
-    if (id) {
-        if (id < lineObj.stations.length) {
-            if (key) {
-                if (lineObj.stations[id].hasOwnProperty(key)) {
-                    return lineObj.stations[id][key];
-                }
-                return errorMsg;
-            }
-            return lineObj.stations[id];
-        }
-        return errorMsg;
-    }
-    return lineObj;
+    const { stations } = lineObj;
+
+    if (!id) return lineObj;
+    if (id >= stations.length) return errorMsg;
+
+    if (!key) return stations[id];
+    if (!stations[id].hasOwnProperty(key)) return errorMsg;
+
+    return stations[id][key];
 
 };
+
 
 const populateLinesArray = () => {
     return rawLinesData.map(line => {
@@ -45,7 +42,7 @@ const lineNameValidity = (line) => {
     if (/^[a-zA-Z ]*$/i.test(line)) {
         for (let lineObj of linesArray) {
             if (lineObj.name.split(' ')[0].toLowerCase() === line.split(' ')[0].toLowerCase()
-                || lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
+            || lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
                 return lineObj;
             }
         }

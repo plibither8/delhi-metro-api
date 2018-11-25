@@ -8,7 +8,11 @@ router.get('/', (req, res) => {
 
 router.get('/lines/:line?/:id?/:key?', (req, res) => {
     const { line, id, key } = req.params;
-    return res.json(api.getLines(line, id, key));
+    api.getLines(line, id, key)
+        .then(response => {
+            res.status(response.statusCode);
+            res.json(response.body);
+        });
 });
 
 router.get('/stations/:station?/:key?', (req, res) => {

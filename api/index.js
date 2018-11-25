@@ -59,17 +59,34 @@ const lineNameValidity = (line) => {
 
 const getLines = (lineName = null, id = null, key = null) => {
 
-    const linesArray = populateLinesArray();
+    return new Promise((resolve, reject) => {
 
-    if (lineName) {
-        const line = lineNameValidity(lineName);
-        if (line !== -1) {
-            return returnLinesRequiredData(line, id, key);
+        let statusCode, body;
+        const linesArray = populateLinesArray();
+
+        if (lineName) {
+            const line = lineNameValidity(lineName);
+            if (line !== -1) {
+                statusCode = 200;
+                body = returnLinesRequiredData(line, id, key);
+            }
+            else {
+                statusCode = 400;
+                body = errorMsg;
+            }
         }
-        return errorMsg;
-    }
 
-    return linesArray;
+        else {
+            statusCode = 200;
+            body = linesArray;
+        }
+
+        resolve({
+            statusCode: statusCode,
+            body: body
+        });
+
+    })
 
 };
 

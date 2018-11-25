@@ -17,6 +17,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'pug');
 app.set('views', __dirname + '/views/pages');
 
+// TODO: remove in production:
 // Prettify JSON files when sending through res.json()
 app.set('json spaces', 2);
 

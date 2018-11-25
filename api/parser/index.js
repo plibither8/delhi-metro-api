@@ -61,7 +61,7 @@ const parse = async () => {
     });
 
     writeToJson(linesArray, 'lines.json');
-    writeToJson({ updated: new Date() }, 'meta.json');
+    writeToJson({ last_updated_at: new Date() }, 'meta.json');
 
 };
 

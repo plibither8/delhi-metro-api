@@ -660,13 +660,13 @@
       {
         "id": 4,
         "name": "IGI Airport",
-        "distance": 17.8,
+        "distance": 17.9,
         "mobile": 0
       },
       {
         "id": 5,
         "name": "Dwarka Sec-21-Airport",
-        "distance": 20.7,
+        "distance": 20.8,
         "mobile": 8800793197
       }
     ]
@@ -762,43 +762,43 @@
       {
         "id": 14,
         "name": "Mundka Industrial Area (MIA)",
-        "distance": 8753.1,
+        "distance": 15,
         "mobile": 0
       },
       {
         "id": 15,
         "name": "Ghevra Metro station",
-        "distance": 8753.1,
+        "distance": 17.1,
         "mobile": 0
       },
       {
         "id": 16,
         "name": "Tikri Kalan",
-        "distance": 8753.1,
+        "distance": 18.9,
         "mobile": 0
       },
       {
         "id": 17,
         "name": "Tikri Border",
-        "distance": 8753.1,
+        "distance": 20.2,
         "mobile": 0
       },
       {
         "id": 18,
         "name": "Pandit Shree Ram Sharma",
-        "distance": 8753.1,
+        "distance": 21.5,
         "mobile": 0
       },
       {
         "id": 19,
         "name": "Bahdurgarh City",
-        "distance": 8753.1,
+        "distance": 23,
         "mobile": 0
       },
       {
         "id": 20,
         "name": "Brig Hoshiar Singh",
-        "distance": 8753.1,
+        "distance": 24.8,
         "mobile": 0
       }
     ]
@@ -816,61 +816,61 @@
       {
         "id": 1,
         "name": "Sector 54 Chowk",
-        "distance": 1.5,
+        "distance": 1.1,
         "mobile": 0
       },
       {
         "id": 2,
         "name": "Sector 53-54",
-        "distance": 5.3,
+        "distance": 2.6,
         "mobile": 0
       },
       {
         "id": 3,
         "name": "Sector 42-43",
-        "distance": 5.9,
+        "distance": 3.9,
         "mobile": 0
       },
       {
         "id": 4,
         "name": "DLF Phase 1",
-        "distance": 7.5,
+        "distance": 5.5,
         "mobile": 0
       },
       {
         "id": 5,
         "name": "DLF Sikandarpur",
-        "distance": 9.2,
+        "distance": 6.6,
         "mobile": 0
       },
       {
         "id": 6,
         "name": "DLF Phase 2",
-        "distance": 9.2,
+        "distance": 7.3,
         "mobile": 0
       },
       {
         "id": 7,
         "name": "Vodaphone Belvedere Towers",
-        "distance": 9.9,
+        "distance": 8,
         "mobile": 0
       },
       {
         "id": 8,
         "name": "Indus Bank Cyber City",
-        "distance": 10.5,
+        "distance": 8.6,
         "mobile": 0
       },
       {
         "id": 9,
         "name": "Micromax Moulsari",
-        "distance": 11.1,
+        "distance": 9.2,
         "mobile": 0
       },
       {
         "id": 10,
         "name": "DLF Phase 3",
-        "distance": 11.9,
+        "distance": 10,
         "mobile": 0
       }
     ]
@@ -1074,13 +1074,13 @@
       {
         "id": 32,
         "name": "Sant Surdas - Sihi",
-        "distance": 8803.3,
+        "distance": 41.8,
         "mobile": 0
       },
       {
         "id": 33,
         "name": "Raja Nahar Singh",
-        "distance": 8803.3,
+        "distance": 43.5,
         "mobile": 0
       }
     ]
@@ -1116,127 +1116,127 @@
       {
         "id": 4,
         "name": "Sadar Bazaar Cantonment",
-        "distance": 18.7,
+        "distance": 7.2,
         "mobile": 8448991352
       },
       {
         "id": 5,
         "name": "Terminal 1 IGI Airport",
-        "distance": 32.5,
+        "distance": 8.9,
         "mobile": 8448991351
       },
       {
         "id": 6,
         "name": "Shankar Vihar",
-        "distance": 34.6,
+        "distance": 10.7,
         "mobile": 8448991350
       },
       {
         "id": 7,
         "name": "Vasant Vihar",
-        "distance": 36.8,
+        "distance": 12.8,
         "mobile": 8448991349
       },
       {
         "id": 8,
         "name": "Munirka",
-        "distance": 38.2,
+        "distance": 14,
         "mobile": 8448991348
       },
       {
         "id": 9,
         "name": "R.K Puram",
-        "distance": 39.7,
+        "distance": 15.4,
         "mobile": 8448991347
       },
       {
         "id": 10,
         "name": "IIT Delhi",
-        "distance": 42.5,
+        "distance": 16.3,
         "mobile": 8448991346
       },
       {
         "id": 11,
         "name": "Hauz Khas",
-        "distance": 43.4,
+        "distance": 17.5,
         "mobile": 8448991345
       },
       {
         "id": 12,
         "name": "Panchsheel Park",
-        "distance": 45.2,
+        "distance": 19,
         "mobile": 8448991344
       },
       {
         "id": 13,
         "name": "Chirag Delhi",
-        "distance": 46.4,
+        "distance": 19.9,
         "mobile": 8448991343
       },
       {
         "id": 14,
         "name": "Greater Kailash",
-        "distance": 47.7,
+        "distance": 20.8,
         "mobile": 8448991342
       },
       {
         "id": 15,
         "name": "Nehru Enclave",
-        "distance": 48.6,
+        "distance": 22.1,
         "mobile": 8448991341
       },
       {
         "id": 16,
         "name": "Kalkaji Mandir",
-        "distance": 49.7,
+        "distance": 23,
         "mobile": 9205682382
       },
       {
         "id": 17,
         "name": "Okhla N.S.I.C",
-        "distance": 51.5,
+        "distance": 23.8,
         "mobile": 9205682381
       },
       {
         "id": 18,
         "name": "Sukhdev Vihar",
-        "distance": 53,
+        "distance": 24.9,
         "mobile": 9205682380
       },
       {
         "id": 19,
         "name": "Jamia Millia Islamia",
-        "distance": 53.9,
+        "distance": 26.1,
         "mobile": 9205682379
       },
       {
         "id": 20,
         "name": "Okhla Vihar",
-        "distance": 54.8,
+        "distance": 26.6,
         "mobile": 9205682378
       },
       {
         "id": 21,
         "name": "Jasola Vihar Shaheen Bagh",
-        "distance": 56.5,
+        "distance": 28.4,
         "mobile": 9205682377
       },
       {
         "id": 22,
         "name": "Kalindi Kunj",
-        "distance": 57.4,
+        "distance": 29.8,
         "mobile": 9205682376
       },
       {
         "id": 23,
         "name": "Okhla Bird Sanctuary",
-        "distance": 58.3,
+        "distance": 31.4,
         "mobile": 9205682375
       },
       {
         "id": 24,
         "name": "Botanical Garden",
-        "distance": 72.7,
+        "distance": 33.1,
         "mobile": 9205682374
       }
     ]
@@ -1254,193 +1254,193 @@
       {
         "id": 1,
         "name": "Azadpur",
-        "distance": 1.8,
+        "distance": 2.1,
         "mobile": 0
       },
       {
         "id": 2,
         "name": "Shalimar Bagh",
-        "distance": 3.5,
+        "distance": 3.7,
         "mobile": 0
       },
       {
         "id": 3,
         "name": "Netaji Subhash Place",
-        "distance": 4.8,
+        "distance": 5.1,
         "mobile": 0
       },
       {
         "id": 4,
         "name": "Shakurpur",
-        "distance": 6,
+        "distance": 6.3,
         "mobile": 0
       },
       {
         "id": 5,
         "name": "Punjabi Bagh West",
-        "distance": 7.5,
+        "distance": 7.7,
         "mobile": 0
       },
       {
         "id": 6,
         "name": "ESI Hospital",
-        "distance": 9.9,
+        "distance": 10.2,
         "mobile": 0
       },
       {
         "id": 7,
         "name": "Rajouri Garden",
-        "distance": 11.1,
+        "distance": 11.3,
         "mobile": 0
       },
       {
         "id": 8,
         "name": "Maya Puri",
-        "distance": 12.6,
+        "distance": 12.8,
         "mobile": 0
       },
       {
         "id": 9,
         "name": "Naraina Vihar",
-        "distance": 14.1,
+        "distance": 14.3,
         "mobile": 0
       },
       {
         "id": 10,
         "name": "Delhi Cantt",
-        "distance": 15.9,
+        "distance": 16.1,
         "mobile": 0
       },
       {
         "id": 11,
         "name": "Durgabai Deshmukh South Campus",
-        "distance": 25.7,
+        "distance": 19.7,
         "mobile": 0
       },
       {
         "id": 12,
         "name": "Sir Vishweshwaraiah Moti Bagh",
-        "distance": 8784.4,
+        "distance": 21,
         "mobile": 0
       },
       {
         "id": 13,
         "name": "Bhikaji Cama Place",
-        "distance": 8784.4,
+        "distance": 22.6,
         "mobile": 0
       },
       {
         "id": 14,
         "name": "Sarojini Nagar",
-        "distance": 8784.4,
+        "distance": 23.8,
         "mobile": 0
       },
       {
         "id": 15,
         "name": "INA",
-        "distance": 8784.4,
+        "distance": 24.9,
         "mobile": 0
       },
       {
         "id": 16,
         "name": "South Extension",
-        "distance": 8784.4,
+        "distance": 26.1,
         "mobile": 0
       },
       {
         "id": 17,
         "name": "Lajpat Nagar",
-        "distance": 8784.4,
+        "distance": 27.7,
         "mobile": 0
       },
       {
         "id": 18,
         "name": "Trilokpuri Sanjay Lake",
-        "distance": 8784.4,
+        "distance": 36.2,
         "mobile": 0
       },
       {
         "id": 19,
         "name": "Vinod Nagar East",
-        "distance": 8784.4,
+        "distance": 37,
         "mobile": 0
       },
       {
         "id": 20,
         "name": "Mandawali - West Vinod Nagar",
-        "distance": 8784.4,
+        "distance": 37.5,
         "mobile": 0
       },
       {
         "id": 21,
         "name": "IP Extension",
-        "distance": 8784.4,
+        "distance": 38.5,
         "mobile": 0
       },
       {
         "id": 22,
         "name": "Anand Vihar",
-        "distance": 8784.4,
+        "distance": 40.2,
         "mobile": 0
       },
       {
         "id": 23,
-        "name": "Karkarduma",
-        "distance": 8784.4,
+        "name": "Karkar Duma",
+        "distance": 41.2,
         "mobile": 0
       },
       {
         "id": 24,
         "name": "Karkarduma Court",
-        "distance": 8784.4,
+        "distance": 42.3,
         "mobile": 0
       },
       {
         "id": 25,
         "name": "Krishna Nagar",
-        "distance": 8784.4,
+        "distance": 43,
         "mobile": 0
       },
       {
         "id": 26,
         "name": "East Azad Nagar",
-        "distance": 8784.4,
+        "distance": 43.9,
         "mobile": 0
       },
       {
         "id": 27,
         "name": "Welcome",
-        "distance": 8784.4,
+        "distance": 45.1,
         "mobile": 0
       },
       {
         "id": 28,
         "name": "Jaffrabad",
-        "distance": 8784.4,
+        "distance": 46.3,
         "mobile": 0
       },
       {
         "id": 29,
         "name": "Maujpur",
-        "distance": 8784.4,
+        "distance": 47.4,
         "mobile": 0
       },
       {
         "id": 30,
         "name": "Gokulpuri",
-        "distance": 8784.4,
+        "distance": 48.7,
         "mobile": 0
       },
       {
         "id": 31,
         "name": "Johri Enclave",
-        "distance": 8784.4,
+        "distance": 50,
         "mobile": 0
       },
       {
         "id": 32,
         "name": "Shiv Vihar",
-        "distance": 8784.4,
+        "distance": 50.9,
         "mobile": 0
       }
     ]

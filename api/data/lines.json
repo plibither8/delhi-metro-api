@@ -1355,92 +1355,122 @@
       },
       {
         "id": 18,
-        "name": "Trilokpuri Sanjay Lake",
-        "distance": 36.2,
+        "name": "Vinobapuri",
+        "distance": 29.1,
         "mobile": 0
       },
       {
         "id": 19,
-        "name": "Vinod Nagar East",
-        "distance": 37,
+        "name": "Ashram",
+        "distance": 30.3,
         "mobile": 0
       },
       {
         "id": 20,
-        "name": "Mandawali - West Vinod Nagar",
-        "distance": 37.5,
+        "name": "Hazrat Nizamuddin",
+        "distance": 32.2,
         "mobile": 0
       },
       {
         "id": 21,
-        "name": "IP Extension",
-        "distance": 38.5,
+        "name": "Mayur Vihar Phase-1",
+        "distance": 35.8,
         "mobile": 0
       },
       {
         "id": 22,
-        "name": "Anand Vihar",
-        "distance": 40.2,
+        "name": "Mayur Vihar Pocket I",
+        "distance": 36.6,
         "mobile": 0
       },
       {
         "id": 23,
-        "name": "Karkar Duma",
-        "distance": 41.2,
+        "name": "Trilokpuri Sanjay Lake",
+        "distance": 37.9,
         "mobile": 0
       },
       {
         "id": 24,
-        "name": "Karkarduma Court",
-        "distance": 42.3,
+        "name": "Vinod Nagar East",
+        "distance": 38.7,
         "mobile": 0
       },
       {
         "id": 25,
-        "name": "Krishna Nagar",
-        "distance": 43,
+        "name": "Mandawali - West Vinod Nagar",
+        "distance": 39.3,
         "mobile": 0
       },
       {
         "id": 26,
-        "name": "East Azad Nagar",
-        "distance": 43.9,
+        "name": "IP Extension",
+        "distance": 40.3,
         "mobile": 0
       },
       {
         "id": 27,
-        "name": "Welcome",
-        "distance": 45.1,
+        "name": "Anand Vihar",
+        "distance": 41.9,
         "mobile": 0
       },
       {
         "id": 28,
-        "name": "Jaffrabad",
-        "distance": 46.3,
+        "name": "Karkar Duma",
+        "distance": 42.9,
         "mobile": 0
       },
       {
         "id": 29,
-        "name": "Maujpur",
-        "distance": 47.4,
+        "name": "Karkarduma Court",
+        "distance": 44,
         "mobile": 0
       },
       {
         "id": 30,
-        "name": "Gokulpuri",
-        "distance": 48.7,
+        "name": "Krishna Nagar",
+        "distance": 44.7,
         "mobile": 0
       },
       {
         "id": 31,
-        "name": "Johri Enclave",
-        "distance": 50,
+        "name": "East Azad Nagar",
+        "distance": 45.7,
         "mobile": 0
       },
       {
         "id": 32,
+        "name": "Welcome",
+        "distance": 46.8,
+        "mobile": 0
+      },
+      {
+        "id": 33,
+        "name": "Jaffrabad",
+        "distance": 48,
+        "mobile": 0
+      },
+      {
+        "id": 34,
+        "name": "Maujpur",
+        "distance": 49.1,
+        "mobile": 0
+      },
+      {
+        "id": 35,
+        "name": "Gokulpuri",
+        "distance": 50.4,
+        "mobile": 0
+      },
+      {
+        "id": 36,
+        "name": "Johri Enclave",
+        "distance": 51.7,
+        "mobile": 0
+      },
+      {
+        "id": 37,
         "name": "Shiv Vihar",
-        "distance": 50.9,
+        "distance": 52.6,
         "mobile": 0
       }
     ]

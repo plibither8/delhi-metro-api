@@ -6,8 +6,9 @@ setup_git() {
 }
 
 commit_website_files() {
+    DATE=$(date +%Y-%m-%d)
     git add api/data/*
-    git commit --message "chore: Update metro data [${date +%Y-%m-%d}]"
+    git commit --message "chore: Update metro data [${DATE}]"
 }
 
 upload_files() {

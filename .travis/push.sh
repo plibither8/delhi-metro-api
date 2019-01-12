@@ -12,7 +12,7 @@ commit_website_files() {
 }
 
 upload_files() {
-    git remote add origin ${GH_TOKEN}@github.com/plibither8/delhi-metro-api.git > /dev/null 2>&1
+    git remote add origin https://${GH_TOKEN}@github.com/plibither8/delhi-metro-api.git > /dev/null 2>&1
     git push --quiet --set-upstream origin master
 }
 

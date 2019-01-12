@@ -6,7 +6,7 @@ setup_git() {
 }
 
 commit_website_files() {
-    DATE=$(date +%Y-%m-%d)
+    DATE=$(date "+%F %T %Z")
     git add api/data/*
     git commit --message "chore: Auto-update metro data [${DATE}]"
 }

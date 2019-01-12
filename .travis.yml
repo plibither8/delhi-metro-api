@@ -1,11 +1,14 @@
 language: node_js
 node_js:
-  - 8.11.1
+- 8.11.1
 install:
-  - npm install
+- npm install
 script:
-  - npm run lint
-  - npm run update-data
+- npm run lint
+- npm run update-data
 after_success:
-  - chmod +x .travis/push.sh
-  - .travis/push.sh
+- chmod +x .travis/push.sh
+- ".travis/push.sh"
+env:
+  global:
+    secure: oN/7YompsC3JKu309YzFoFWHnSaMDYw7N0YVOlbUTCPPFtXI4qi7ek7J7qF6avsei3x16YJHlAd7GMhQH75H89rNHTlNlg9e+ekqjjY5ISHsBZIA8qZkyGF8XrK+tzy4ABCbTtZBlxriO0MjnIbMxU6Iqpa/A6RvN8ws/oipBWdZ3s4U6QiosGWTPNzx9nNWt9DE/ltnRyWAy5Tye2HyBQBcFx8IfAg9HgVsYwzgD+CFh1AtjxFFk7IU6dchCDg5/HpdZqS0S0kjSrauLD/x4qb5PONktE32sXM5kjXTnkHyrmRJc+x5we6icYLUJe4ZngZxzw+eq6FC8yHbLyMpywkBIvwquNjrKO6h6fJVfvltJXu71he26HNgzAu6E33kcPdRITI7+Gom0W85EgvTFqjaDaWm9i/SpCYzPCQP0pnMxhKj4ISf0sOdXrmToUNaosucXj2rQcxoaXgh0PiesvV2TcXjZibMu22llg59JAMc/PCWPBEtjcCbK26DB7JdbW2yZ9gQmR1xglmhoQJ3/3pXnE47GUbRbRTFjnJZRJaEYgnmd/Xb4WFKRxUVMwwBx+VWLrYrtBrs1h9/1fJh5kg/VcwqCvvwWIMUlqY3NOUl2f7qGAALdewOIIweY9Of8EIZrB6bUdeJgfHM62jQh0OMcnHk2/uOWqgXTw/gz0s=

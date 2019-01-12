@@ -7,8 +7,8 @@ script:
 - npm run lint
 - npm run update-data
 after_success:
-- chmod +x .travis/push.sh
-- ".travis/push.sh"
+- chmod +x ./update-data.sh
+- bash ./update-data.sh
 env:
   global:
   - secure: Myf3wsdLSbkB+SSH1Fouj/ifpW0iEO3bUVthRQfnneJH3SpNYGnYdNg07oBc1eeaeew+YHiQWYhADmUkLAyQSf290yYTug7SbfS6ZeyPtUIogHs2s1+Y/HxXHWOoGH748HuitNe4oqbfq3ljenKhh/D66POMcd+NcpdeNFKH7UrL2ZGZ9SLoxcnpCrB6XOP9qJuyWSOlk0icJBYGCV6LdyWAbDrLZSGIvdVc7E3VdHzJRYxzGzPD0tQsZsI8Hua3nEVSY0zo+CArnN8UkMov2a2Tfysm0kxqFCipo9rXaxT8s45QzgEdxCXkIyu7m405HqCxTQUWaZLAsFbD83vVwcHxhrBhsv7vwRJdiMQkSyEdaRmcjydijq41VTwn7Q8Yuii+U8fM1hYWDy6HGgIODZHVyoYqROLSsSwhYQ7FITp0DCcVpAsxuMtv7Ez62cZRp0aoLP2LSWVXM/ScJqwOKZYXT1xkE4rIhof9ia0/HvgoW04MBPnSW4JPXyjQGP9wvJfqY6rR7EV6Toc0Ko0fFZpYzVTIB4tVWzpAS65mQbkiACm6wGWpEoUmDmOqW2XT5SgikgZ1jUGvhHCQCDDf4/JcXqsuaRjEVDBdsG3iVIjm3zEDjkEGSfwuIDiJoUP7sXIDzhKL/Br97XxxvQA8fw9gtW73AKuQh2COwpcVcic=

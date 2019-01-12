@@ -12,8 +12,9 @@ commit_website_files() {
 }
 
 upload_files() {
+    git remote remove origin
     git remote add origin https://${GH_TOKEN}@github.com/plibither8/delhi-metro-api.git > /dev/null 2>&1
-    git push --quiet --set-upstream origin master
+    git push --quiet origin HEAD:master
 }
 
 setup_git

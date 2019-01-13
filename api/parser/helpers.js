@@ -1,6 +1,7 @@
 const request        = require('request-promise');
 const fs             = require('fs');
 const path           = require('path');
+const cgf            = require('changed-git-files');
 const { promisify }  = require('util');
 
 const writeFile      = promisify(fs.writeFile);
@@ -43,4 +44,9 @@ module.exports.exceptionCheck = (name) => {
         return 'Janak Puri West';
     }
     return null;
+};
+
+module.exports.linesJsonUpdated = () => {
+    return cgf((err, res) =>
+        res.some(file => (file.filename === 'api/data/lines.json')));
 };

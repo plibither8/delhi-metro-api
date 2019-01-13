@@ -70,7 +70,7 @@ const parse = async () => {
         last_checked_at: checkedDate
     };
 
-    metadata.last_updated_at === linesJsonUpdated()
+    metadata.last_updated_at = linesJsonUpdated()
         ? checkedDate
         : metadata.last_updated_at;
 

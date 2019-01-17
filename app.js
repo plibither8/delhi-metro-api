@@ -1,4 +1,5 @@
 const express = require('express');
+const subdomain = require('express-subdomain');
 
 const app = express();
 
@@ -8,7 +9,7 @@ app.use('/', home);
 
 // API routes handler
 const apiRoute = require('./routes/api');
-app.use('/api', apiRoute);
+app.use(subdomain('api', apiRoute));
 
 //Setting public directory
 app.use(express.static(__dirname + '/public'));

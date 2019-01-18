@@ -165,12 +165,7 @@ const getStationList = (lineName = null) => {
 
 // };
 
-const getMetaInfo = () => {
-    return require('./data/meta.json');
-};
-
 module.exports.getLines       = getLines;
 module.exports.getStations    = getStations;
 module.exports.getLineList    = getLineList;
 module.exports.getStationList = getStationList;
-module.exports.getMetaInfo    = getMetaInfo;

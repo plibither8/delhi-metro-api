@@ -3,7 +3,7 @@ const api      = require('../api');
 const router   = express.Router();
 
 router.get('/', (req, res) => {
-    return res.json(api.getMetaInfo()); 
+    return res.json(api.getStations());
 });
 
 router.get('/lines/:line?/:id?/:key?', (req, res) => {

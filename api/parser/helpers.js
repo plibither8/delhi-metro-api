@@ -1,10 +1,4 @@
 const request        = require('request-promise');
-const fs             = require('fs');
-const path           = require('path');
-const cgf            = require('changed-git-files');
-const { promisify }  = require('util');
-
-const writeFile      = promisify(fs.writeFile);
 
 const delhiMetroInfoBaseUrl = 'https://delhimetrorail.info';
 
@@ -31,22 +25,9 @@ module.exports.getStationsHtml = async () => {
 //     return html;
 // };
 
-module.exports.writeToJson = async (object, fileName) => {
-    await writeFile(path.join(__dirname, `../data/${fileName}`), JSON.stringify(object, null, '  '), 'utf8', (err) => {
-        if (err) {
-            throw err;
-        }
-    });
-};
-
 module.exports.exceptionCheck = (name) => {
     if (name === 'Janakpuri West') {
         return 'Janak Puri West';
     }
     return null;
-};
-
-module.exports.linesJsonUpdated = () => {
-    return cgf((err, res) =>
-        res.some(file => (file.filename === 'api/data/lines.json')));
 };

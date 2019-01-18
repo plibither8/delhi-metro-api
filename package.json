@@ -5,8 +5,7 @@
   "main": "api/index.js",
   "scripts": {
     "lint": "eslint \"app.js\" \"routes/**/*.js\" \"api/**/*.js\"",
-    "lint:fix": "npm run lint -- --fix",
-    "update-data": "node api/parser"
+    "lint:fix": "npm run lint -- --fix"
   },
   "repository": {
     "type": "git",
@@ -28,7 +27,6 @@
   "homepage": "https://github.com/plibither8/delhi-metro-api#readme",
   "dependencies": {
     "@babel/core": "^7.1.0",
-    "changed-git-files": "0.0.1",
     "cheerio": "^1.0.0-rc.2",
     "express": "^4.16.3",
     "express-subdomain": "^1.0.5",

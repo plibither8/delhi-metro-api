@@ -1,4 +1,5 @@
-const rawLinesData = require('./data/lines.json');
+let rawLinesData;
+require('./parser').parse().then(data => rawLinesData = data);
 
 const errorMsg = 'Error: Invalid query. Please try again.';
 

@@ -1,12 +1,10 @@
 const cheerio = require('cheerio');
 const {
     exceptionCheck,
-    writeToJson,
-    getStationsHtml,
-    linesJsonUpdated
-}             = require('./helpers');
+    getStationsHtml
+} = require('./helpers');
 
-const parse = async () => {
+module.exports.parse = async () => {
 
     const html = await getStationsHtml();
     const $ = cheerio.load(html, {
@@ -61,23 +59,6 @@ const parse = async () => {
 
     });
 
-    writeToJson(linesArray, 'lines.json');
-
-    const checkedDate = new Date();
-
-    const metadata = {
-        ...require('../data/meta.json'),
-        last_checked_at: checkedDate
-    };
-
-    metadata.last_updated_at = linesJsonUpdated()
-        ? checkedDate
-        : metadata.last_updated_at;
-
-    writeToJson(metadata, 'meta.json');
+    return linesArray;
 
 };
-
-(() => {
-    parse();
-})();

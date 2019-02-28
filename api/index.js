@@ -55,7 +55,7 @@ const lineNameValidity = line => {
 	if (/^[a-zA-Z ]*$/i.test(line)) {
 		for (const lineObj of linesArray) {
 			if (lineObj.name.split(' ')[0].toLowerCase() === line.split(' ')[0].toLowerCase() ||
-			lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
+            lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
 				return lineObj;
 			}
 		}
@@ -189,8 +189,10 @@ const getRoute = async (from, to) => {
 	return utils.getRouteHtml(fromStation, toStation);
 };
 
-module.exports.getLines = getLines;
-module.exports.getStations = getStations;
-module.exports.getLineList = getLineList;
-module.exports.getStationList = getStationList;
-module.exports.getRoute = getRoute;
+module.exports = {
+	getLines,
+	getStations,
+	getLineList,
+	getStationList,
+	getRoute
+};

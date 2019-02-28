@@ -55,7 +55,7 @@ const lineNameValidity = line => {
 	if (/^[a-zA-Z ]*$/i.test(line)) {
 		for (const lineObj of linesArray) {
 			if (lineObj.name.split(' ')[0].toLowerCase() === line.split(' ')[0].toLowerCase() ||
-            lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
+	lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
 				return lineObj;
 			}
 		}

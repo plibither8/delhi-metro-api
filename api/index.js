@@ -7,7 +7,7 @@ require('./parser').parse().then(data => {
 
 const errorMsg = 'Error: Invalid query. Please try again.';
 
-const searchStation = (arr, obj) => {
+function searchStation(arr, obj) {
 	for (const [i, el] of arr.entries()) {
 		if (el.name === obj.name) {
 			return i;
@@ -17,7 +17,7 @@ const searchStation = (arr, obj) => {
 	return -1;
 };
 
-const returnLinesRequiredData = (lineObj, id, key) => {
+function returnLinesRequiredData(lineObj, id, key) {
 	const {stations} = lineObj;
 
 	if (!id) {
@@ -39,7 +39,7 @@ const returnLinesRequiredData = (lineObj, id, key) => {
 	return stations[id][key];
 };
 
-const populateLinesArray = () => {
+function populateLinesArray() {
 	return rawLinesData.map(line => {
 		const stationsArray = line.stations.map(station => getStations(station.name));
 		return {
@@ -50,12 +50,12 @@ const populateLinesArray = () => {
 	});
 };
 
-const lineNameValidity = line => {
+function lineNameValidityline() {
 	const linesArray = populateLinesArray();
 	if (/^[a-zA-Z ]*$/i.test(line)) {
 		for (const lineObj of linesArray) {
 			if (lineObj.name.split(' ')[0].toLowerCase() === line.split(' ')[0].toLowerCase() ||
-	lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
+				lineObj.name.toLowerCase().split(' ').join('') === line.toLowerCase().split(' ').join('')) {
 				return lineObj;
 			}
 		}
@@ -74,7 +74,7 @@ const lineNameValidity = line => {
 	return -1;
 };
 
-const getLines = (lineName = null, id = null, key = null) => {
+function getLines(lineName = null, id = null, key = null) {
 	const linesArray = populateLinesArray();
 
 	if (lineName) {
@@ -89,7 +89,7 @@ const getLines = (lineName = null, id = null, key = null) => {
 	return linesArray;
 };
 
-const getStations = (stationName = null, key = null) => {
+function getStations(stationName = null, key = null) {
 	const stationsArray = [];
 
 	rawLinesData.map(line => {
@@ -146,13 +146,13 @@ const getStations = (stationName = null, key = null) => {
 	return stationsArray;
 };
 
-const getLineList = () => {
+function getLineList() {
 	const lineNames = [];
 	rawLinesData.map(line => lineNames.push(line.name));
 	return lineNames;
 };
 
-const getStationList = (lineName = null) => {
+function getStationList(lineName = null) {
 	const stationNames = [];
 	if (lineName) {
 		const line = lineNameValidity(lineName);
@@ -168,7 +168,7 @@ const getStationList = (lineName = null) => {
 	return stationNames;
 };
 
-const getRoute = async (from, to) => {
+function getRoute(from, to) {
 	const stationsArray = getStations();
 
 	let fromStation;

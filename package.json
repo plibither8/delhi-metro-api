@@ -31,7 +31,7 @@
     "eslint": "^5.13.0",
     "express": "^4.16.3",
     "express-subdomain": "^1.0.5",
-    "pug": "^2.0.3",
+    "pug": "^3.0.1",
     "request": "^2.88.0",
     "request-promise": "^4.2.2"
   },
